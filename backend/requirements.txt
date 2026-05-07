@@ -1,0 +1,28 @@
+# --- Core Framework ---
+fastapi[all]>=0.100.0        # Framework chính và các tiện ích đi kèm (Pydantic v2, v.v.)
+uvicorn[standard]>=0.23.0    # ASGI Server để chạy ứng dụng FastAPI
+
+# --- Database & Migrations ---
+sqlalchemy>=2.0.0            # ORM mạnh mẽ để tương tác với PostgreSQL
+alembic>=1.11.0              # Công cụ quản lý phiên bản database (migration)[cite: 1, 2]
+psycopg2-binary>=2.9.0       # Adapter để kết nối Python với PostgreSQL
+
+# --- Realtime & Caching ---
+redis>=5.0.0                 # Client để tương tác với Redis cho caching và leaderboard[cite: 1, 2]
+websockets>=11.0.0           # Thư viện hỗ trợ kết nối realtime[cite: 1, 2]
+
+# --- Security & Authentication ---
+python-jose[cryptography]>=3.3.0  # Xử lý JWT (tạo và mã hóa token)[cite: 1, 2]
+passlib[bcrypt]>=1.7.4            # Băm mật khẩu (hashing) bảo mật
+python-multipart>=0.0.6           # Xử lý dữ liệu từ form (nếu cần cho login/upload)
+
+# --- Configuration & Environment ---
+pydantic-settings>=2.0.0     # Đọc cấu hình từ file .env một cách chuyên nghiệp[cite: 1]
+python-dotenv>=1.0.0         # Hỗ trợ load biến môi trường
+
+# --- Logging & Monitoring ---
+loguru>=0.7.0                # Thư viện logging hiện đại, dễ theo dõi[cite: 1]
+
+# --- Testing ---
+pytest>=7.4.0                # Framework viết unit test chuyên nghiệp[cite: 1]
+httpx>=0.24.0                # Client để giả lập request khi viết Integration Test
